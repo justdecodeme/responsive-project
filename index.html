@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Project</title>
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 200px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    /* common */
+    a {
+      text-decoration: none;
+    }
+    .wrapper {
+      max-width: 1200px;
+      background: red;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 20px;
+    }
+    .grid .item {
+      height: 200px;
+      background: yellow;
+      position: relative;
+      background-image: url('vacation.jpeg');
+      background-size: cover;
+      background-position: center;      
+    }    
+
+    /* header */
+    header {
+      /* background: orange; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      height: 46px;
+      border-bottom: 1px solid grey;
+    }  
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: normal;
+    }  
+    header h1 a {
+      color: grey;
+    }
+    header h1 span {
+      font-weight: bold;
+    }
+    header nav ul {
+      display: flex;
+      list-style: none;      
+    }
+    header nav ul li {
+      margin-left: 20px;
+    }
+    header nav ul li:first-child {
+      margin-left: 0px;
+    }
+    header nav ul li.active a {
+      color: black;
+      background: grey;
+    }
+    header nav ul li a:hover {
+      color: black;
+      background: grey;
+    }
+    header nav ul li a {
+      color: grey;
+      padding: 5px 10px;
+    }
+
+    /* banner */
+    .banner {
+      background-color: orange;
+    }
+    .banner .wrapper {
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('vacation.jpeg');
+      background-size: cover;
+    }
+    .banner h1 {
+      color: white;
+    }
+    .banner h1 .top {
+      background-color: rgba(0, 0, 0, 0.414);
+      padding: 10px 20px;
+    }
+
+    /* project */
+    .project {
+      background: green;
+    }
+    .project .grid .item p {
+      color: white;
+      background-color: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 5px 10px;
+    }
+
+    /* about */
+    .about {
+      background-color: lightblue;
+    }
+    .about .grid .item {
+      /* we don't need any height for grid items in about section */
+      height: auto;
+      background-image: none;
+    }
+    .about .grid .item .top {
+      height: 100px;
+      background: pink;
+      background-image: url('vacation.jpeg');
+      background-size: cover;
+      background-position: center;        
+    }
+    .about .grid .item .bottom a {
+      background: grey;
+      color: black;
+      display: block;
+      text-align: center;
+      padding: 5px 10px;
+    }
+
+    /* contact */
+    .contact {
+      background-color: blueviolet;
+    }
+    .contact input, .contact textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .contact button {
+      color: white;
+      background-color: black;
+      padding: 10px 20px;
+      border: none;
+    }
+
+    /* map */
+    .map {
+      margin-top: 50px;
+      background-color: orange;
+    }
+    .map .wrapper {
+      height: 400px;
+      background-image: url('vacation.jpeg');
+      background-size: cover;
+      background-position: center;        
+    }
+
+    /* footer */
+    .footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    /* tab view */
+    @media screen and (max-width: 700px) {
+      /* common */
+      .grid {
+        grid-template-columns: repeat(2, auto);
+      }
+      /* banner */
+      .banner h1 .top {
+          display: block;
+          text-align: center;
+      }
+    }
+
+    /* mobile view */
+    @media screen and (max-width: 500px) {
+      /* common */
+      .grid {
+        grid-template-columns: repeat(1, auto);
+      }
+
+      /* header */
+      header nav {
+        display: none;
+      }
+      /* banner */
+      .banner h1 .bottom {
+          display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1><a href="#"><span>B R</span> Architechs</a></h1>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- banner -->
+  <div class="banner">
+    <div class="wrapper">
+      <h1><span class="top">B R</span> <span class="bottom">Architects</span></h1>
+    </div>
+  </div>
+  
+  <!-- project -->
+  <div class="project">
+    <div class="wrapper">
+      <h1>Project</h1>
+      <div class="grid">
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+        <div class="item">
+          <p>Project Name</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- about -->
+  <div class="about">
+    <div class="wrapper">
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit, non, totam modi vitae aperiam possimus dolore similique quibusdam ab architecto facilis dicta mollitia odio aut necessitatibus voluptates in. Temporibus?</p>
+      <div class="grid">
+        <div class="item">
+          <div class="top"></div>
+          <div class="bottom">
+            <h2>John Doe</h2>
+            <h3>CEO & Founder</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="top"></div>
+          <div class="bottom">
+            <h2>John Doe</h2>
+            <h3>CEO & Founder</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="top"></div>
+          <div class="bottom">
+            <h2>John Doe</h2>
+            <h3>CEO & Founder</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="top"></div>
+          <div class="bottom">
+            <h2>John Doe</h2>
+            <h3>CEO & Founder</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <!-- contact -->
+  <div class="contact">
+    <div class="wrapper">
+      <h1>Contact</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Subject">
+      <textarea cols="30" rows="10" placeholder="Comments..."></textarea>
+      <button>Send Message</button>
+    </div>
+  </div>
+
+  <!-- map -->
+  <div class="map">
+    <div class="wrapper">
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; weball.io 2021
+  </div>
+</body>
+</html>
